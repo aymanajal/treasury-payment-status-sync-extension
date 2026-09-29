@@ -1,0 +1,113 @@
+#treasury-sync-runner {
+  position: fixed;
+  z-index: 2147483647;
+  right: 18px;
+  bottom: 18px;
+  width: 330px;
+  color: #263238;
+  background: #fff;
+  border: 1px solid #cfd8dc;
+  border-radius: 10px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, .22);
+  font: 13px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  overflow: hidden;
+}
+
+#treasury-sync-runner * { box-sizing: border-box; }
+
+#treasury-sync-runner header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  color: #fff;
+  background: #168653;
+}
+
+#treasury-sync-runner header button {
+  width: 26px;
+  height: 24px;
+  padding: 0;
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.55);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#ts-body { padding: 12px; }
+
+#treasury-sync-runner .ts-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+#ts-status {
+  flex: 0 0 auto;
+  padding: 2px 7px;
+  color: #546e7a;
+  background: #eceff1;
+  border-radius: 10px;
+}
+
+#ts-status[data-status="running"] { color: #075c35; background: #d9f3e6; }
+#ts-status[data-status="paused"] { color: #8a5300; background: #fff1cc; }
+#ts-status[data-status="stopping"] { color: #9b2c2c; background: #fee2e2; }
+#ts-status[data-status="done"] { color: #075c35; background: #d9f3e6; }
+
+#ts-count { text-align: right; color: #455a64; }
+#ts-current { margin-bottom: 9px; color: #37474f; overflow-wrap: anywhere; }
+
+#treasury-sync-runner .ts-field,
+#treasury-sync-runner .ts-check {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 8px 0;
+}
+
+#ts-delay {
+  width: 62px;
+  padding: 4px 6px;
+  border: 1px solid #b0bec5;
+  border-radius: 4px;
+}
+
+#treasury-sync-runner .ts-actions { display: flex; gap: 8px; margin: 11px 0; }
+
+#treasury-sync-runner .ts-actions button {
+  flex: 1;
+  padding: 6px 8px;
+  color: #263238;
+  background: #fff;
+  border: 1px solid #90a4ae;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#treasury-sync-runner .ts-actions button:first-child { color: #fff; background: #168653; border-color: #168653; }
+#treasury-sync-runner .ts-actions button:disabled { opacity: .45; cursor: not-allowed; }
+
+#ts-log {
+  height: 105px;
+  padding: 7px;
+  color: #546e7a;
+  background: #f6f8f9;
+  border: 1px solid #e0e5e7;
+  border-radius: 5px;
+  overflow: auto;
+  font-size: 12px;
+}
+
+#ts-log > div { margin-bottom: 3px; overflow-wrap: anywhere; }
+#ts-log .ts-log-success { color: #087443; }
+#ts-log .ts-log-error { color: #b42318; }
+
+#treasury-sync-runner .ts-note {
+  margin: 8px 0 0;
+  color: #78909c;
+  font-size: 11px;
+}

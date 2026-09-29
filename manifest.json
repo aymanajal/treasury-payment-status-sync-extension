@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "司库支付状态顺序同步",
+  "version": "1.0.5",
+  "description": "在 YonBIP/NCCloud 直联支付列表中，按当前列表顺序逐条点击司库支付状态同步。",
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://192.168.116.150:9080/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "司库支付状态顺序同步",
+    "default_popup": "popup.html"
+  }
+}
